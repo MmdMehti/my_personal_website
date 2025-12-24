@@ -1,4 +1,3 @@
-/* ===== CSS Variables (Custom Properties) ===== */
 :root {
   --primary-color: #0b5f7a;
   --primary-dark: #085a66;
@@ -17,7 +16,6 @@
   --transition: all 0.3s ease;
 }
 
-/* ===== Reset & Base ===== */
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +30,7 @@ html, body {
   line-height: 1.6;
 }
 
-/* تغییر کلیدی برای sticky footer */
+/*footer*/
 html {
   height: 100%;
 }
@@ -43,7 +41,6 @@ body {
   flex-direction: column;
 }
 
-/* ===== Container ===== */
 .container {
   width: 92%;
   max-width: 1200px;
@@ -51,7 +48,6 @@ body {
   padding: 0 15px;
 }
 
-/* ===== Header & Navigation (Flexbox) ===== */
 .site-header {
   background: var(--primary-color);
   color: var(--white);
@@ -67,7 +63,6 @@ body {
   margin: 0;
 }
 
-/* ===== Header Container Flexbox ===== */
 .site-header .container {
   display: flex;
   justify-content: space-between;
@@ -100,13 +95,11 @@ body {
   color: var(--white);
 }
 
-/* ===== Main Content ===== */
 main {
-  flex: 1; /* این باعث می‌شود main فضای باقی‌مانده را پر کند */
+  flex: 1;
   padding: 1rem 0 2rem 0;
 }
 
-/* ===== Main Grid Layout (for index.html) ===== */
 .main-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -120,7 +113,6 @@ main {
   }
 }
 
-/* ===== Cards (box-shadow) ===== */
 .card {
   background: var(--white);
   padding: 1.5rem;
@@ -135,7 +127,6 @@ main {
   box-shadow: var(--shadow-hover);
 }
 
-/* ===== Hero Section ===== */
 .hero h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -145,7 +136,6 @@ main {
   margin-bottom: 1.5rem;
 }
 
-/* ===== Skills Flexbox (index.html) ===== */
 .skills-flex {
   display: flex;
   flex-wrap: wrap;
@@ -171,7 +161,6 @@ main {
   font-style: italic;
 }
 
-/* ===== Overflow Section ===== */
 .overflow-section {
   max-height: 200px;
   overflow-y: auto;
@@ -182,7 +171,6 @@ main {
   margin: 1rem 0;
 }
 
-/* ===== About Page (Flexbox + Grid) ===== */
 .about-grid {
   display: flex;
   flex-direction: column;
@@ -260,7 +248,6 @@ main {
   color: var(--text-light);
 }
 
-/* ===== Portfolio Page (Grid) ===== */
 .portfolio-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -324,7 +311,6 @@ main {
   margin-top: auto;
 }
 
-/* ===== Contact Page (Grid) ===== */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -368,7 +354,6 @@ main {
   background: var(--primary-dark);
 }
 
-/* ===== Forms ===== */
 .form-group {
   margin-bottom: 1.2rem;
 }
@@ -407,7 +392,6 @@ main {
   width: auto;
 }
 
-/* ===== Buttons ===== */
 .btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -444,7 +428,6 @@ main {
   font-size: 1.1rem;
 }
 
-/* ===== Section Titles ===== */
 .section-title {
   font-size: 2.2rem;
   color: var(--primary-color);
@@ -459,20 +442,19 @@ main {
   font-size: 1.1rem;
 }
 
-/* ===== Footer (Sticky) ===== */
+/*footer*/
 .site-footer {
   background: var(--primary-color);
   color: var(--white);
   padding: 1.5rem 0;
   text-align: center;
-  margin-top: auto; /* کلید اصلی: footer را به پایین می‌چسباند */
+  margin-top: auto;
   width: 100%;
   border-radius: var(--radius) var(--radius) 0 0;
   box-shadow: var(--shadow);
-  flex-shrink: 0; /* جلوگیری از فشرده شدن footer */
+  flex-shrink: 0;
 }
 
-/* ===== Responsive Design (Media Queries) ===== */
 @media (max-width: 768px) {
   .site-header .container {
     flex-direction: column;
@@ -524,28 +506,23 @@ main {
   }
 }
 
-/* ===== اضافه کردن ارتفاع حداقل برای صفحات با محتوای کم ===== */
 .about-me,
 .portfolio,
 .contact-section {
   min-height: 60vh;
 }
 
-/* ===== رفع مشکلات صفحه خانه در موبایل ===== */
 @media (max-width: 767px) {
-  /* بهبود Grid روی موبایل */
   .main-grid {
     gap: 1.5rem;
   }
   
-  /* بهبود کارت‌ها روی موبایل */
   .hero.card,
   .intro.card {
     padding: 1.2rem;
     margin-bottom: 1rem;
   }
   
-  /* بهبود تیترها */
   .hero h2 {
     font-size: 1.8rem;
     text-align: center;
@@ -561,7 +538,6 @@ main {
     margin-bottom: 1rem;
   }
   
-  /* بهبود دکمه */
   .hero .btn {
     display: block;
     width: 80%;
@@ -569,7 +545,6 @@ main {
     text-align: center;
   }
   
-  /* بهبود مهارت‌ها */
   .skills-flex {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -592,7 +567,6 @@ main {
     color: #666;
   }
   
-  /* بهبود overflow-section */
   .overflow-section {
     max-height: none;
     overflow: visible;
@@ -603,7 +577,6 @@ main {
 }
 
 @media (max-width: 480px) {
-  /* برای موبایل‌های خیلی کوچک */
   .skills-flex {
     grid-template-columns: 1fr;
   }
